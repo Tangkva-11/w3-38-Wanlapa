@@ -1,0 +1,7 @@
+$a = ["ant" ,"bbird", "cat"]
+
+$b = [
+    "name" => "wanlapa",
+    "age" => 25,
+    "phone" => "0981461455"
+]
