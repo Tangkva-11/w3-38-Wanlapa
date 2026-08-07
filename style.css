@@ -1,105 +1,353 @@
-@import url('https://fonts.googleapis.com/css2?family=Mali:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap');
+
+:root {
+    --bg-color: #f7f9fc;
+    --card-bg: #ffffff;
+    --text-main: #4a5568;
+    --text-muted: #718096;
+    --border-color: #edf2f7;
+    --row-hover: #f0f4f8;
+    --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+    
+    /* สีพาสเทลสำหรับปุ่ม */
+    --pastel-blue-bg: #e2ece9;
+    --pastel-blue-text: #4a6fa5;
+    --pastel-pink-bg: #ffe5ec;
+    --pastel-pink-text: #d87093;
+}
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
+    font-family: 'Kanit', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     min-height: 100vh;
-    padding: 45px 25px;
-    font-family: "Mali", sans-serif;
-    color: #2d174d;
-    background:
-        radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.75) 0 2px, transparent 3px),
-        radial-gradient(circle at 80% 15%, rgba(255, 255, 255, 0.7) 0 2px, transparent 3px),
-        radial-gradient(circle at 70% 75%, rgba(255, 255, 255, 0.6) 0 1px, transparent 2px),
-        linear-gradient(135deg, #2a0b52, #6a2ca0, #b35ad8, #f0b6ff);
-    background-size: 170px 170px, 220px 220px, 130px 130px, cover;
+}
+
+/* --- Header Style --- */
+.header {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 30px auto;
+    background: var(--card-bg);
+    padding: 16px 28px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+}
+
+.header-inner {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header h2 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #5a6b7c;
+    margin: 0;
+}
+
+/* กลุ่มเมนูลิงก์ใน Header */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    font-weight: 400;
+    background-color: #f1f3f9;
+    transition: all 0.25s ease;
+}
+
+/* สีปุ่มเมื่อ Hover */
+.nav-links a:hover {
+    background-color: var(--pastel-pink-bg);
+    color: var(--pastel-pink-text);
+    transform: translateY(-1px);
+}
+
+/* 🔥 ปรับแต่งสถานะปุ่มหน้าปัจจุบัน (Active) */
+.nav-links a.active {
+    background-color: var(--pastel-blue-bg);
+    color: var(--pastel-blue-text);
+    font-weight: 500;
+    box-shadow: 0 2px 6px rgba(74, 111, 165, 0.15);
+}
+
+/* --- Content Container --- */
+.container {
+    width: 100%;
+    max-width: 1000px;
+    background: var(--card-bg);
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
 }
 
 h1 {
-    width: fit-content;
-    margin: 0 auto 18px;
-    padding: 10px 28px;
-    border: 2px solid rgba(255, 255, 255, 0.65);
-    border-radius: 18px;
-    color: #fff8ff;
-    font-size: 30px;
+    font-weight: 500;
+    font-size: 1.8rem;
+    color: #5a6b7c;
+    margin-bottom: 24px;
     text-align: center;
-    text-shadow: 0 2px 8px #3b0b66;
-    background: rgba(87, 28, 137, 0.55);
-    box-shadow: 0 0 22px rgba(255, 220, 255, 0.75);
+    letter-spacing: 0.5px;
 }
 
-a {
-    display: block;
-    width: fit-content;
-    margin: 0 auto 28px;
-    padding: 11px 22px;
-    border: 1px solid #f8d7ff;
-    border-radius: 25px;
-    background: linear-gradient(135deg, #8f3fc0, #d477e8);
-    color: white;
-    font-weight: 600;
-    text-decoration: none;
-    box-shadow: 0 5px 12px rgba(55, 8, 91, 0.35);
-    transition: 0.25s;
-}
-
-a:hover {
-    transform: translateY(-3px);
-    background: linear-gradient(135deg, #a34bd4, #ec98ff);
-    box-shadow: 0 8px 18px rgba(55, 8, 91, 0.45);
+/* --- Table Style --- */
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
 }
 
 table {
-    width: 92%;
-    max-width: 1050px;
-    margin: auto;
-    overflow: hidden;
-    border: 1px solid rgba(255, 230, 255, 0.8);
-    border-radius: 18px;
-    border-collapse: separate;
-    border-spacing: 0;
-    background: rgba(255, 248, 255, 0.9);
-    box-shadow: 0 12px 30px rgba(39, 5, 73, 0.45);
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    background-color: var(--card-bg);
 }
 
 th {
-    padding: 15px;
-    background: linear-gradient(135deg, #4b126f, #8e36ad);
-    color: #fff6ff;
-    font-size: 17px;
-    text-shadow: 0 1px 4px #3d075f;
+    background-color: #f1f3f9;
+    color: #5c6b73;
+    font-weight: 500;
+    padding: 16px;
+    font-size: 0.95rem;
+    border-bottom: 2px solid var(--border-color);
+    white-space: nowrap;
 }
 
 td {
-    padding: 13px;
-    text-align: center;
-    border-bottom: 1px solid #e5c7ef;
-    color: #44205e;
-    font-weight: 500;
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+    font-size: 0.95rem;
+    color: var(--text-main);
 }
 
 tr:last-child td {
     border-bottom: none;
 }
 
-tbody tr {
-    transition: 0.2s;
+tr:hover {
+    background-color: var(--row-hover);
+    transition: background-color 0.2s ease;
 }
 
-tbody tr:hover {
-    background: #f5dcff;
-    transform: scale(1.01);
-}
-
-img {
-    width: 105px;
-    max-height: 135px;
+.cover-img {
+    width: 110px;
+    height: 110px;
     object-fit: cover;
-    border: 3px solid #c86de5;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.06);
+    display: block;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 400;
+    background-color: var(--pastel-blue-bg);
+    color: var(--pastel-blue-text);
+}
+
+.badge-type {
+    background-color: var(--pastel-pink-bg);
+    color: var(--pastel-pink-text);
+}
+
+.price-text {
+    font-weight: 500;
+    color: #6b705c;
+}
+
+/* --- Footer Style --- */
+.footer {
+    width: 100%;
+    max-width: 1000px;
+    margin: 30px auto 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.footer-links a {
+    color: var(--pastel-blue-text);
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+/* --- Form Styling (สำหรับหน้า add_game / edit_game) --- */
+.form-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #5c6b73;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1.5px solid var(--border-color);
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(91, 19, 123, 0.3);
+    font-family: 'Kanit', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text-main);
+    background-color: #fcfdfe;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #b8c0ff;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(184, 192, 255, 0.25);
+}
+
+.form-group input::placeholder {
+    color: #a0aec0;
+}
+
+/* ปุ่มกดบันทึกและยกเลิก */
+.form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.btn-submit {
+    background-color: var(--pastel-blue-bg);
+    color: var(--pastel-blue-text);
+    border: none;
+    padding: 12px 28px;
+    border-radius: 20px;
+    font-family: 'Kanit', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.btn-submit:hover {
+    background-color: #cdd7f6;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(74, 111, 165, 0.2);
+}
+
+.btn-cancel {
+    text-decoration: none;
+    color: var(--text-muted);
+    background-color: #f1f3f9;
+    padding: 12px 24px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.btn-cancel:hover {
+    background-color: #e2e8f0;
+    color: var(--text-main);
+}
+/* --- Readonly Input (สำหรับรหัสเกมที่ห้ามแก้ไข) --- */
+.form-group input[readonly] {
+    background-color: #edf2f7;
+    color: var(--text-muted);
+    cursor: not-allowed;
+    border-color: #e2e8f0;
+}
+
+/* ข้อความแจ้งเตือนเมื่อไม่พบข้อมูล */
+.empty-msg {
+    text-align: center;
+    color: var(--text-muted);
+    padding: 20px 0;
+}
+
+.form-actions-center {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+/* --- Action Buttons ในตาราง --- */
+.action-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+}
+
+.btn-edit,
+.btn-delete {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+/* ปุ่มแก้ไข - พาสเทลฟ้า/ส้มอ่อน */
+.btn-edit {
+    background-color: #e2ece9;
+    color: #4a6fa5;
+}
+
+.btn-edit:hover {
+    background-color: #cdd7f6;
+    transform: translateY(-1px);
+}
+
+/* ปุ่มลบ - พาสเทลแดง/ชมพู */
+.btn-delete {
+    background-color: #ffe5ec;
+    color: #d87093;
+}
+
+.btn-delete:hover {
+    background-color: #fbc4d4;
+    transform: translateY(-1px);
 }

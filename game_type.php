@@ -8,9 +8,7 @@
 </head>
 <body>
 
-    <h1>🔮 ตารางประเภทเกม 🔮</h1>
-
-    <a href="index.php">← กลับไปหน้าข้อมูลเกม</a>
+    
 
     <?php
         error_reporting(E_ALL);
