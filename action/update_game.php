@@ -22,8 +22,7 @@ $sql = "UPDATE `games`
     `game_price`='$game_price',
     `game_cover`='$game_cover',
     `type_id`='$type_id' 
-    WHERE `game_id`='$game_id',
-";
+    WHERE `game_id` = '$game_id' ";
 
 $result = mysqli_query($con, $sql);
 

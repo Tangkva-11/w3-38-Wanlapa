@@ -17,8 +17,7 @@
                 <a href="index.php">Home</a>
                 <a href="add_game.php" class="active">Add</a>
                 <a href="game_type.php">Type</a>
-                <a href="edit_game.php">Edit1</a>
-                <a href="manage_game.php">Edit2</a>
+                <a href="manage_game.php">Manage</a>
             </div>
         </div>
     </div>

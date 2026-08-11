@@ -8,7 +8,17 @@
 </head>
 <body>
 
-    
+    <div class="header">
+    <div class="header-inner">
+        <h2>Game Shop</h2>
+        <div class="nav-links">
+            <a href="index.php" class="active">Home</a>
+            <a href="add_game.php">Add</a>
+            <a href="game_type.php">Type</a>
+            <a href="manage_game.php">Manage</a>
+        </div>
+        </div>
+    </div>
 
     <?php
         error_reporting(E_ALL);

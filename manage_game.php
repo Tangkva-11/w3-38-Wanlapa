@@ -28,8 +28,7 @@
                 <a href="index.php" >Home</a>
                 <a href="add_game.php">Add</a>
                 <a href="game_type.php">Type</a>
-                <a href="edit_game.php">Edit1</a>
-                <a href="manage_game.php" class="active">Edit2</a>
+                <a href="manage_game.php" class="active">Manage</a>
             </div>
         </div>
     </div>

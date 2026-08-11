@@ -21,18 +21,7 @@
     ?>
 
     <!-- Header / Navbar แนวนอน -->
-    <div class="header">
-        <div class="header-inner">
-            <h2>Game Shop</h2>
-            <div class="nav-links">
-                <a href="index.php">Home</a>
-                <a href="add_game.php">Add</a>
-                <a href="game_type.php">Type</a>
-                <a href="edit_game.php" class="active">Edit1</a>
-                <a href="manage_game.php">Edit2</a>
-            </div>
-        </div>
-    </div>
+
 
     <!-- การ์ดเนื้อหาหลัก -->
     <div class="container">
